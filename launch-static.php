@@ -48,8 +48,8 @@ $canonical = realpath("/path/to/resource/osltrg-saints-primary");
 # different languages.
 $langpack = array(
   "en" => array(
-    "Users/sophiashapira/gitter/pray/mass-missal-lng-en-reclaimist",
-    "Users/sophiashapira/gitter/pray/mass-missal-lng-en-rewordist"
+    "/path/to/resource/mass-missal-lng-en-reclaimist",
+    "/path/to/resource/mass-missal-lng-en-rewordist"
   )
 );
 //  "en" -> array (

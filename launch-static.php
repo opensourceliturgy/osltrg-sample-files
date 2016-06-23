@@ -31,21 +31,32 @@ $canonical = realpath("/path/to/resource/osltrg-saints-primary");
 // in realpath() because the program will do so for you when these
 // arrays are used.
 
-# Location of language modules.
-# Currently, the language module hasn't yet been implemented - but it
-# doesn't hurt to get your configuration ready for when it is.
-# However, in the future, that will change. The exact wordings of many
-# (if not all) prayers will be moved into the language module --- so
-# that alternate language modules can be available. Even among progressive
-# Catholics who speak the same language, the Reclaimists and Rewordists
-# will probably have very strong differences in opinion regarding how
-# many of the prayers aught to be worded.
-# The ordering of the array should begin with whatever language is
-# preferred
-# It is an associative array of unassociative arrays rather than a
-# simple array so as to allow you to group variational languag modules
-# of the same language, separating them from modules of entirely
-# different languages.
+// Location of language modules.
+// Currently, the language module hasn't yet been implemented - but it
+// doesn't hurt to get your configuration ready for when it is.
+// However, in the future, that will change. The exact wordings of many
+// (if not all) prayers will be moved into the language module --- so
+// that alternate language modules can be available. Even among progressive
+// Catholics who speak the same language, the Reclaimists and Rewordists
+// will probably have very strong differences in opinion regarding how
+// many of the prayers aught to be worded.
+//   The ordering of the array should begin with whatever language is
+// preferred
+//   It is an associative array of unassociative arrays rather than a
+// simple array so as to allow you to group variational languag modules
+// of the same language, separating them from modules of entirely
+// different languages. This can be useful if you wish to produce
+// a multilingual rendition of the missal (that is, one that will
+// display the same prayer in multiple languages when it is available
+// in multiple languages).
+//   Also - the program will not enforce that the language that a
+// module is labeled as being part of here matches the official
+// language-identifier of the module. So, if you wish (for whatever
+// reason) to render a missal that displays both the reclaimist
+// and rewordist forms of a prayer when both are available, all
+// you have to do is treat them here as though they are actually
+// in different languages (as opposed to this example in which
+// they are treated as variants within the same language).
 $langpack = array(
   "en" => array(
     "/path/to/resource/mass-missal-lng-en-reclaimist",
@@ -55,14 +66,14 @@ $langpack = array(
 //  "en" -> array (
 //  )
 
-# Preference files to modify the preferences set by default in the program.
-# (This stuff isn't done in the launch script because the program has to
-# set the defaults before the defaults can be modified.)
+// Preference files to modify the preferences set by default in the program.
+// (This stuff isn't done in the launch script because the program has to
+// set the defaults before the defaults can be modified.)
 $preffile = array('pref/main.php');
 
-# Array of files to be included in the HTML header section.
-# This is a good place to put CSS styles - but if you do, they must include
-# the HTML tags with which to embed the CSS.
+// Array of files to be included in the HTML header section.
+// This is a good place to put CSS styles - but if you do, they must include
+// the HTML tags with which to embed the CSS.
 $headfile = array(
   '/path/to/resource/osltrg-style/main.php',
 );

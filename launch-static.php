@@ -32,7 +32,28 @@ $canonical = realpath("/path/to/resource/osltrg-saints-primary");
 // arrays are used.
 
 # Location of language modules.
-$langpack = array("Users/sophiashapira/gitter/pray/mass-missal-lng-reclaimist");
+# Currently, the language module hasn't yet been implemented - but it
+# doesn't hurt to get your configuration ready for when it is.
+# However, in the future, that will change. The exact wordings of many
+# (if not all) prayers will be moved into the language module --- so
+# that alternate language modules can be available. Even among progressive
+# Catholics who speak the same language, the Reclaimists and Rewordists
+# will probably have very strong differences in opinion regarding how
+# many of the prayers aught to be worded.
+# The ordering of the array should begin with whatever language is
+# preferred
+# It is an associative array of unassociative arrays rather than a
+# simple array so as to allow you to group variational languag modules
+# of the same language, separating them from modules of entirely
+# different languages.
+$langpack = array(
+  "en" => array(
+    "Users/sophiashapira/gitter/pray/mass-missal-lng-en-reclaimist",
+    "Users/sophiashapira/gitter/pray/mass-missal-lng-en-rewordist"
+  )
+);
+//  "en" -> array (
+//  )
 
 # Preference files to modify the preferences set by default in the program.
 # (This stuff isn't done in the launch script because the program has to

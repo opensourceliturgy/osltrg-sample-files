@@ -6,6 +6,22 @@
 // of your system.
 
 
+// NON-DIRECTORY VARIABLES:
+
+// Now we define the sequence of languages
+// (This part can be a bit technical.)
+$langpath = array (
+  array (
+    'lst' => array (
+      array (
+        'lang' => 'en'
+      )
+    ),
+    'gnr' => array()
+  )
+);
+
+
 
 // INDIVIDUAL DIRECTORY VARIABLES:
 // The value of each of the following directory paths must be wrapped
